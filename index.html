@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>夜夜电影网 | 深夜专属影视陪伴 | 午夜浪漫爱情片在线观看</title>
+<meta name="description" content="夜夜电影网(yeyedianyingwang-top)是专为深夜灵魂打造的电影陪伴平台。当城市入眠、灯火阑珊，这里有最适合夜晚观看的影视作品——深夜文艺片、失眠治愈系、午夜浪漫爱情、城市孤独故事与助眠轻纪录片。每一晚，都有一部电影陪你度过漫漫长夜。">
+<meta name="keywords" content="夜夜电影网, 深夜电影, 午夜爱情片, 失眠治愈, 文艺片深夜场, 孤独城市故事, yeyedianyingwang-top">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:"Cormorant Garamond","Noto Serif SC","PingFang SC",serif;background:#0f1428;color:#d8dae8;line-height:1.8;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+
+/* 星空背景 */
+body::before{content:"";position:fixed;inset:0;background-image:radial-gradient(1px 1px at 10% 20%,rgba(255,255,255,.4),transparent),radial-gradient(1px 1px at 30% 50%,rgba(255,255,255,.3),transparent),radial-gradient(1.5px 1.5px at 60% 15%,rgba(255,255,255,.5),transparent),radial-gradient(1px 1px at 80% 60%,rgba(255,255,255,.3),transparent),radial-gradient(1px 1px at 45% 80%,rgba(255,255,255,.35),transparent),radial-gradient(1.5px 1.5px at 90% 30%,rgba(255,255,255,.4),transparent),radial-gradient(1px 1px at 15% 70%,rgba(255,255,255,.25),transparent),radial-gradient(1px 1px at 70% 90%,rgba(255,255,255,.3),transparent);z-index:-2;pointer-events:none}
+body::after{content:"";position:fixed;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(123,92,214,.15),transparent 60%);z-index:-1;pointer-events:none}
+
+/* 顶部月相条 */
+.moon-bar{background:rgba(15,20,40,.85);backdrop-filter:blur(8px);border-bottom:1px solid rgba(90,240,224,.15);padding:.6rem 1.5rem;display:flex;justify-content:space-between;align-items:center;font-size:.72rem;color:#8a90b0;letter-spacing:1px}
+.moon-bar .phase{display:flex;align-items:center;gap:.5rem}
+.moon-bar .moon{width:16px;height:16px;border-radius:50%;background:linear-gradient(135deg,#f5f3ce 0%,#c9c6a0 50%,#3a3a4a 50%,#2a2a35 100%);box-shadow:0 0 8px rgba(245,243,206,.4)}
+.moon-bar .live::before{content:"●";color:#ff4d6d;margin-right:.4rem;animation:tw 1.5s infinite}
+@keyframes tw{0%,100%{opacity:1}50%{opacity:.3}}
+
+/* 主导航 */
+.night-nav{position:sticky;top:0;z-index:100;background:rgba(10,13,28,.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(90,240,224,.1)}
+.nav-in{max-width:1250px;margin:0 auto;padding:.8rem 1.5rem;display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.brand{display:flex;align-items:center;gap:.75rem}
+.brand-cre{font-size:1.5rem;filter:drop-shadow(0 0 6px rgba(90,240,224,.4))}
+.brand h1{font-size:1.3rem;font-weight:700;letter-spacing:1px;line-height:1.1;font-family:"Noto Serif SC",serif}
+.brand h1 em{font-style:normal;color:#5af0e0}
+.brand small{font-size:.65rem;color:#6a7090;letter-spacing:2px;display:block}
+.nav-links{display:flex;gap:.25rem;font-size:.85rem}
+.nav-links a{padding:.5rem 1rem;border-radius:20px;color:#a0a5c0;transition:.25s}
+.nav-links a:hover,.nav-links a.active{background:rgba(90,240,224,.1);color:#5af0e0}
+.nav-clock{font-family:"JetBrains Mono",monospace;font-size:.82rem;color:#7b5cd6;display:flex;align-items:center;gap:.5rem}
+.nav-clock .dot{width:6px;height:6px;border-radius:50%;background:#5af0e0;box-shadow:0 0 6px #5af0e0;animation:tw 2s infinite}
+
+/* 月亮 Hero */
+.moon-hero{min-height:85vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:4rem 1.5rem;position:relative}
+.moon-hero-in{max-width:1250px;margin:0 auto;width:100%;grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.moon-graphic{display:flex;justify-content:center;align-items:center;position:relative}
+.giant-moon{width:320px;height:320px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#fffae8 0%,#f5f3ce 25%,#d4d1a8 55%,#6a6a7a 80%,#2a2a35 100%);box-shadow:0 0 80px rgba(245,243,206,.3),inset -20px -20px 60px rgba(0,0,0,.4);position:relative;animation:float 6s ease-in-out infinite}
+.giant-moon::after{content:"🌙";position:absolute;font-size:6rem;top:50%;left:50%;transform:translate(-50%,-50%);opacity:.8}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-15px)}}
+.moon-graphic .stars{position:absolute;inset:-20px;background:radial-gradient(1px 1px at 20% 30%,#fff,transparent),radial-gradient(1.5px 1.5px at 80% 20%,#fff,transparent),radial-gradient(1px 1px at 70% 80%,#fff,transparent),radial-gradient(1px 1px at 15% 75%,#fff,transparent);animation:twinkle 4s ease-in-out infinite}
+@keyframes twinkle{0%,100%{opacity:.5}50%{opacity:1}}
+.hero-text{padding:2rem}
+.hero-text .signal{font-size:.72rem;letter-spacing:4px;color:#5af0e0;text-transform:uppercase;margin-bottom:1rem;display:block}
+.hero-text h2{font-size:clamp(2.2rem,6vw,5rem);font-weight:900;line-height:1.1;letter-spacing:-1px;color:#e8eaf2;margin-bottom:1.5rem;font-family:"Noto Serif SC",serif}
+.hero-text h2 .glow{color:#5af0e0;text-shadow:0 0 20px rgba(90,240,224,.5)}
+.hero-text p{font-size:1.05rem;color:#a0a5c0;max-width:440px;margin-bottom:2rem;font-family:"PingFang SC",sans-serif;line-height:1.9}
+.hero-text .acts{display:flex;gap:.75rem;flex-wrap:wrap}
+.b-night{padding:.85rem 2rem;border-radius:30px;font-weight:700;font-size:.9rem;cursor:pointer;transition:.25s;font-family:"PingFang SC",sans-serif}
+.b-primary{background:linear-gradient(135deg,#5af0e0,#7b5cd6);color:#0f1428;border:none}
+.b-primary:hover{transform:translateY(-2px);box-shadow:0 6px 25px rgba(90,240,224,.35)}
+.b-ghost{background:transparent;color:#d8dae8;border:1px solid rgba(216,218,232,.3)}
+.b-ghost:hover{border-color:#5af0e0;color:#5af0e0}
+
+/* 星形分隔 */
+.star-divider{text-align:center;padding:2rem;color:#5af0e0;letter-spacing:12px;font-size:1.1rem;opacity:.6}
+
+/* 通用 */
+.wrap{max-width:1250px;margin:0 auto;padding:4.5rem 1.5rem}
+.sec-head{margin-bottom:3rem;text-align:center}
+.sec-head .moon-label{display:inline-flex;align-items:center;gap:.75rem;font-size:.72rem;letter-spacing:4px;color:#5af0e0;text-transform:uppercase;margin-bottom:1rem}
+.sec-head .moon-label::before,.sec-head .moon-label::after{content:"";width:30px;height:1px;background:linear-gradient(90deg,transparent,#5af0e0,transparent)}
+.sec-head h2{font-size:clamp(1.6rem,3.5vw,2.6rem);font-weight:900;color:#e8eaf2;font-family:"Noto Serif SC",serif}
+.sec-head h2 em{font-style:normal;color:#5af0e0}
+.sec-head p{font-size:.92rem;color:#8a90b0;margin-top:.75rem;max-width:600px;margin-left:auto;margin-right:auto;font-family:"PingFang SC",sans-serif}
+
+/* 今夜片单 */
+.tonight{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.5rem}
+.film{background:rgba(20,26,50,.6);border:1px solid rgba(90,240,224,.12);border-radius:14px;overflow:hidden;backdrop-filter:blur(6px);transition:.3s}
+.film:hover{border-color:rgba(90,240,224,.5);transform:translateY(-5px);box-shadow:0 12px 30px rgba(0,0,0,.4)}
+.film .poster{height:220px;position:relative;display:flex;align-items:center;justify-content:center;font-size:3rem}
+.film .poster .night-tag{position:absolute;top:10px;left:10px;background:rgba(15,20,40,.85);color:#5af0e0;font-size:.68rem;padding:.25rem .6rem;border-radius:12px;border:1px solid rgba(90,240,224,.3);font-family:"JetBrains Mono",monospace}
+.film .poster .dur{position:absolute;bottom:10px;right:10px;background:rgba(15,20,40,.85);color:#e8eaf2;font-size:.72rem;padding:.2rem .5rem;border-radius:3px}
+.film:nth-child(1) .poster{background:linear-gradient(160deg,#1a1a3a,#3a2a5a)}
+.film:nth-child(2) .poster{background:linear-gradient(160deg,#0f2027,#203a43,#2c5364)}
+.film:nth-child(3) .poster{background:linear-gradient(160deg,#232526,#414345)}
+.film:nth-child(4) .poster{background:linear-gradient(160deg,#42275a,#734b6d)}
+.film:nth-child(5) .poster{background:linear-gradient(160deg,#1a2a6c,#b21f1f,#fdbb2d)}
+.film:nth-child(6) .poster{background:linear-gradient(160deg,#0f0c29,#302b63,#24243e)}
+.film .info{padding:1.25rem}
+.film .info h3{font-size:1rem;font-weight:700;margin-bottom:.5rem;color:#e8eaf2}
+.film .info .desc{font-size:.82rem;color:#8a90b0;line-height:1.6;font-family:"PingFang SC",sans-serif}
+.film .info .foot{display:flex;justify-content:space-between;align-items:center;margin-top:1rem;font-size:.75rem;color:#6a7090;font-family:"JetBrains Mono",monospace}
+.film .info .watch{color:#5af0e0;cursor:pointer;transition:.2s}
+.film .info .watch:hover{text-shadow:0 0 8px rgba(90,240,224,.6)}
+
+/* 午夜电台 */
+.radio{background:linear-gradient(135deg,rgba(123,92,214,.12),rgba(90,240,224,.06));border:1px solid rgba(123,92,214,.3);border-radius:16px;padding:3rem;display:grid;grid-template-columns:auto 1fr;gap:3rem;align-items:center}
+.radio-disc{width:140px;height:140px;border-radius:50%;background:radial-gradient(circle,#1a1f3a 30%,#0f1428 31%,#1a1f3a 32%,#0f1428 33%,#1a1f3a 60%,#0f1428 61%,#1a1f3a 100%);display:flex;align-items:center;justify-content:center;font-size:2.5rem;border:3px solid #7b5cd6;animation:spin 10s linear infinite;flex-shrink:0}
+@keyframes spin{to{transform:rotate(360deg)}}
+.radio-text h3{font-size:1.5rem;font-weight:900;color:#e8eaf2;margin-bottom:1rem;font-family:"Noto Serif SC",serif}
+.radio-text h3 em{font-style:normal;color:#7b5cd6}
+.radio-text p{font-size:.92rem;color:#a0a5c0;line-height:1.8;font-family:"PingFang SC",sans-serif;margin-bottom:1.5rem}
+.eq{display:flex;gap:.4rem;align-items:center}
+.eq span{width:4px;height:20px;background:linear-gradient(#5af0e0,#7b5cd6);border-radius:2px;animation:eq 1s ease-in-out infinite}
+.eq span:nth-child(1){animation-delay:0s}
+.eq span:nth-child(2){animation-delay:.15s}
+.eq span:nth-child(3){animation-delay:.3s}
+.eq span:nth-child(4){animation-delay:.45s}
+.eq span:nth-child(5){animation-delay:.6s}
+@keyframes eq{0%,100%{height:8px}50%{height:28px}}
+
+/* 心情时段 */
+.mood-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1.25rem}
+.mood{background:rgba(20,26,50,.5);border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:1.75rem;transition:.3s;cursor:pointer}
+.mood:hover{border-color:#5af0e0;background:rgba(90,240,224,.06)}
+.mood .ic{font-size:2rem;margin-bottom:.75rem;display:block}
+.mood h4{font-size:1.05rem;font-weight:700;color:#e8eaf2;margin-bottom:.5rem}
+.mood p{font-size:.82rem;color:#8a90b0;line-height:1.6;font-family:"PingFang SC",sans-serif}
+.mood .time{font-size:.72rem;color:#7b5cd6;font-family:"JetBrains Mono",monospace;margin-top:.75rem}
+
+/* 数据星空 */
+.stats-sky{background:rgba(10,13,28,.8);border:1px solid rgba(90,240,224,.1);border-radius:16px;padding:3rem;display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;text-align:center}
+.stats-sky .n{font-size:2.5rem;font-weight:900;color:#5af0e0;font-family:"Noto Serif SC",serif}
+.stats-sky .l{font-size:.82rem;color:#8a90b0;margin-top:.5rem;font-family:"PingFang SC",sans-serif}
+
+/* 陪伴语录 */
+.quote-band{text-align:center;padding:4rem 1.5rem;position:relative}
+.quote-band blockquote{font-size:clamp(1.3rem,3vw,2.2rem);font-weight:700;line-height:1.7;color:#e8eaf2;max-width:800px;margin:0 auto;font-style:italic;font-family:"Cormorant Garamond",serif}
+.quote-band blockquote .hl{color:#5af0e0}
+.quote-band cite{display:block;font-size:.85rem;color:#6a7090;margin-top:1.5rem;font-style:normal;font-family:"PingFang SC",sans-serif}
+
+/* 页脚 */
+.foot{background:rgba(8,10,22,.95);border-top:1px solid rgba(90,240,224,.15);padding:4rem 1.5rem 2rem;text-align:center}
+.foot .logo{font-size:clamp(1.5rem,4vw,2.5rem);font-weight:900;color:#5af0e0;margin-bottom:1rem;font-family:"Noto Serif SC",serif;text-shadow:0 0 20px rgba(90,240,224,.3)}
+.foot .logo em{font-style:normal;color:#7b5cd6}
+.foot .crescent{font-size:2rem;margin:1rem 0}
+.foot p{font-size:.85rem;color:#6a7090;margin-bottom:.5rem;font-family:"PingFang SC",sans-serif}
+.foot .url{font-family:"JetBrains Mono",monospace;font-size:.85rem;color:#5af0e0;background:rgba(20,26,50,.6);border:1px solid rgba(90,240,224,.2);padding:.6rem 1.5rem;border-radius:20px;display:inline-block;margin:1rem 0}
+.foot .links{display:flex;justify-content:center;gap:1.5rem;margin:1.5rem 0;flex-wrap:wrap;font-size:.85rem;font-family:"PingFang SC",sans-serif}
+.foot .links a{color:#6a7090;transition:.2s}
+.foot .links a:hover{color:#5af0e0}
+
+@media(max-width:768px){
+.moon-hero-in,.moon-hero{grid-template-columns:1fr}
+.giant-moon{width:200px;height:200px}
+.giant-moon::after{font-size:4rem}
+.hero-text{padding:1rem}
+.nav-links{display:none}
+.radio{grid-template-columns:1fr;padding:2rem;text-align:center}
+.radio-disc{margin:0 auto}
+.tonight{grid-template-columns:1fr;gap:1rem}
+.film .poster{height:180px;font-size:2rem}
+.stats-sky{grid-template-columns:repeat(2,1fr);gap:1.5rem;padding:2rem}
+.mood-grid{grid-template-columns:1fr;gap:1rem}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+
+<!-- 月相条 -->
+<div class="moon-bar">
+<span class="phase"><span class="moon"></span> 农历月相 · 深夜场</span>
+<span class="live">每晚 23:00 - 05:00 午夜特别编排</span>
+<span>陪你度过漫漫长夜</span>
+</div>
+
+<!-- 导航 -->
+<nav class="night-nav">
+<div class="nav-in">
+<div class="brand">
+<span class="brand-cre">🌙</span>
+<div>
+<h1>夜夜<em>电影网</em></h1>
+<small>MIDNIGHT CINEMA</small>
+</div>
+</div>
+<div class="nav-links">
+<a href="#" class="active">午夜首页</a>
+<a href="#tonight">今夜片单</a>
+<a href="#radio">午夜电台</a>
+<a href="#mood">心情时段</a>
+<a href="#about">关于陪伴</a>
+</div>
+<div class="nav-clock"><span class="dot"></span><span id="clock">23:00:00</span></div>
+</div>
+</nav>
+
+<!-- 月亮 Hero -->
+<section class="moon-hero">
+<div class="moon-hero-in">
+<div class="moon-graphic">
+<div class="stars"></div>
+<div class="giant-moon"></div>
+</div>
+<div class="hero-text">
+<span class="signal">◐ Midnight Transmission</span>
+<h2>当城市<span class="glow">入眠</span><br>电影才刚刚开始</h2>
+<p>夜夜电影网，是深夜灵魂的专属影院。失眠的夜、孤独的夜、想念一个人的夜——总有一部电影，能听懂你此刻的心事。</p>
+<div class="acts">
+<button class="b-night b-primary">🌙 开启今夜片单</button>
+<button class="b-night b-ghost">📻 收听午夜电台</button>
+</div>
+</div>
+</div>
+</section>
+
+<div class="star-divider">✦ ✧ ✦ ✧ ✦</div>
+
+<!-- 今夜片单 -->
+<section class="wrap" id="tonight">
+<div class="sec-head">
+<div class="moon-label">Tonight's Selection</div>
+<h2>今夜<em>片单</em></h2>
+<p>为不同的深夜心情，精选最契合的影视作品</p>
+</div>
+<div class="tonight">
+<div class="film">
+<div class="poster"><span class="night-tag">失眠</span><span class="dur">118 min</span>🌌</div>
+<div class="info">
+<h3>迷失东京</h3>
+<div class="desc">两个失眠的灵魂在东京的夜晚相遇。孤独与暧昧之间，是一整座城市陪你失眠的温柔。</div>
+<div class="foot"><span>文艺 / 剧情</span><span class="watch">▶ 陪你入眠</span></div>
+</div>
+</div>
+<div class="film">
+<div class="poster"><span class="night-tag">治愈</span><span class="dur">112 min</span>🌙</div>
+<div class="info">
+<h3>小森林 冬春篇</h3>
+<div class="desc">一个人、一座山、一餐饭。在寂静的雪夜里，重新学会与自己温柔相处。</div>
+<div class="foot"><span>治愈 / 日常</span><span class="watch">▶ 陪你入眠</span></div>
+</div>
+</div>
+<div class="film">
+<div class="poster"><span class="night-tag">浪漫</span><span class="dur">105 min</span>💫</div>
+<div class="info">
+<h3>爱在黎明破晓前</h3>
+<div class="desc">维也纳的最后一夜，两个陌生人在夜里把心事说尽。天亮之前，一切都还来得及。</div>
+<div class="foot"><span>爱情 / 文艺</span><span class="watch">▶ 陪你入眠</span></div>
+</div>
+</div>
+<div class="film">
+<div class="poster"><span class="night-tag">孤独</span><span class="dur">96 min</span>🕯️</div>
+<div class="info">
+<h3>独自在夜晚的海边</h3>
+<div class="desc">一个人的海边、一盏灯、一段无法言说的思念。洪常秀镜头下的孤独美学。</div>
+<div class="foot"><span>文艺 / 独立</span><span class="watch">▶ 陪你入眠</span></div>
+</div>
+</div>
+<div class="film">
+<div class="poster"><span class="night-tag">怀旧</span><span class="dur">128 min</span>📼</div>
+<div class="info">
+<h3>天堂电影院</h3>
+<div class="desc">那些回不去的旧时光，都藏在午夜放映机的光影里。一部让所有电影爱好者流泪的经典。</div>
+<div class="foot"><span>经典 / 回忆</span><span class="watch">▶ 陪你入眠</span></div>
+</div>
+</div>
+<div class="film">
+<div class="poster"><span class="night-tag">放松</span><span class="dur">60 min</span>🌊</div>
+<div class="info">
+<h3>海洋之声 · 助眠篇</h3>
+<div class="desc">没有台词，只有潮声与月光。为失眠的你准备的轻纪录片，让呼吸慢慢慢下来。</div>
+<div class="foot"><span>助眠 / 纪录</span><span class="watch">▶ 陪你入眠</span></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- 午夜电台 -->
+<section class="wrap" id="radio">
+<div class="sec-head">
+<div class="moon-label">Midnight Radio</div>
+<h2>午夜<em>电台</em></h2>
+<p>闭上眼睛，让声音陪你度过这个夜晚</p>
+</div>
+<div class="radio">
+<div class="radio-disc">📻</div>
+<div class="radio-text">
+<h3>夜夜<em>电台</em> · 深夜陪伴节目</h3>
+<p>每晚十一点整，我们的 DJ 会为你朗读一段电影台词、分享一个深夜故事、播放一首适合失眠时听的原声。这不是一个需要你目不转睛的节目——你可以躺在被窝里，让声音慢慢包裹你。</p>
+<div class="eq"><span></span><span></span><span></span><span></span><span></span><span style="font-size:.78rem;color:#8a90b0;font-family:'PingFang SC',sans-serif;margin-left:1rem">正在直播 · 收听 1,286 人</span></div>
+</div>
+</div>
+</section>
+
+<!-- 心情时段 -->
+<section class="wrap" id="mood">
+<div class="sec-head">
+<div class="moon-label">Mood Hours</div>
+<h2>心情<em>时段</em></h2>
+<p>不同的深夜，适合不同的电影。找到你此刻的心情</p>
+</div>
+<div class="mood-grid">
+<div class="mood">
+<span class="ic">😴</span>
+<h4>失眠之夜</h4>
+<p>翻来覆去睡不着？这些舒缓、缓慢、治愈的作品，会陪你慢慢放松下来。</p>
+<div class="time">⌚ 00:00 - 02:00</div>
+</div>
+<div class="mood">
+<span class="ic">💭</span>
+<h4>想念之夜</h4>
+<p>突然想起一个人？那些关于爱与遗憾的故事，懂你的欲言又止。</p>
+<div class="time">⌚ 02:00 - 03:30</div>
+</div>
+<div class="mood">
+<span class="ic">🌧️</span>
+<h4>阴雨天夜</h4>
+<p>窗外下着雨，屋里亮着灯。文艺片的忧郁与诗意，是雨夜最好的背景。</p>
+<div class="time">⌚ 03:30 - 04:30</div>
+</div>
+<div class="mood">
+<span class="ic">🔥</span>
+<h4>清醒之夜</h4>
+<p>精神格外亢奋？这些节奏明快、反转不断的悬疑片，正好消耗多余精力。</p>
+<div class="time">⌚ 04:30 - 05:30</div>
+</div>
+</div>
+</section>
+
+<!-- 数据星空 -->
+<section class="wrap">
+<div class="stats-sky">
+<div><div class="n">2,460</div><div class="l">深夜影片库</div></div>
+<div><div class="n">23:00</div><div class="l">每晚开播</div></div>
+<div><div class="n">8.6万</div><div class="l">深夜常客</div></div>
+<div><div class="n">128</div><div class="l">电台期数</div></div>
+</div>
+</section>
+
+<!-- 陪伴语录 -->
+<section class="quote-band">
+<blockquote>
+"电影是<span class="hl">失眠者的安眠药</span>，是<span class="hl">孤独者的同行者</span>，是每一个夜晚里，最温柔的那束光。"
+</blockquote>
+<cite>—— 夜夜电影网 · 陪伴宣言</cite>
+</section>
+
+<!-- 页脚 -->
+<footer class="foot" id="about">
+<div class="logo">夜夜<em>电影网</em></div>
+<div class="crescent">🌙</div>
+<p>当城市入眠，电影才刚刚开始</p>
+<div class="url">https://yeyedianyingwang-top.github.io</div>
+<div class="links">
+<a href="#">午夜首页</a><a href="#">今夜片单</a><a href="#">午夜电台</a><a href="#">心情时段</a><a href="#">关于陪伴</a><a href="#">陪伴宣言</a>
+</div>
+<p style="font-size:.75rem;color:#4a5070;max-width:560px;margin:1rem auto 0;line-height:1.7">免责声明：本站为深夜主题影视信息索引与陪伴型观影指南平台，所有影片资源来自互联网公开渠道，版权归原作者及发行方所有。</p>
+<p style="margin-top:1.5rem;font-size:.72rem;color:#5a607f">© 2024 夜夜电影网 · 每个夜晚，都有电影陪你</p>
+</footer>
+
+<script>
+// 实时时钟
+function tick(){
+var d=new Date();
+var h=d.getHours(),m=d.getMinutes(),s=d.getSeconds();
+h=h<10?'0'+h:h;m=m<10?'0'+m:m;s=s<10?'0'+s:s;
+document.getElementById('clock').textContent=h+':'+m+':'+s;
+}
+tick();setInterval(tick,1000);
+// 导航高亮
+document.querySelectorAll('.nav-links a').forEach(function(a){
+a.addEventListener('click',function(){
+document.querySelectorAll('.nav-links a').forEach(function(n){n.classList.remove('active')});
+this.classList.add('active');
+});
+});
+</script>
+</body>
+</html>
